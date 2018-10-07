@@ -1,0 +1,62 @@
+11- Find the name of company that has a graphic designer
+
+SELECT companies.Name, companies.Date, employees.Name, employees.Role
+FROM companies
+join employees on companies.ID= employees.ID
+where Role='Graphic Designer'
+------------------------------------------------------------------------------------------
+
+12- Find the person with the highest number of points in students
+
+select MAX(Points)
+from students
+
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+
+-----------------------------------------------------------------------------------------
+
+13- the AVG 
+select AVG(Points)
+from students
+
+
+333.333333333333
+
+-------------------------------------------------------------------------------------
+14- Find the number of students that have 500 points
+
+select COUNT(Points)
+from students
+Where Points=500
+
+
+
+----------------------------------------------------------------------------------------
+
+15-Find the names of students that contains 's'
+
+select Name
+from students
+where Name like '%s%'; 
+
+"Basma"
+"Hasan"
+
+--------------------------------------------------------------------------------------
+16- Find all students based on the decreasing order of their points
+
+select *
+from students
+order by Points desc
+
+	"5"	"Robert""34"	"M"	"500"
+	"6"	"Jana"	"33"	"F"	"500"
+	"4"	"Layal"	"18"	"F"	"350"
+	"2"	"Basma"	"25"	"F"	"300"
+	"1"	"Alex"	"21"	"M"	"200"
+	"3"	"Hasan"	"30"	"M"	"150"
+
+-----------------------------------------------------------------------------------------
+
+

@@ -1,0 +1,93 @@
+1- Get all the names of students in the database
+
+
+SELECT * FROM students
+
+"Alex"
+"Basma"
+"Hasan"
+"Jana"
+"Layal"
+"Robert"
+
+-________________
+
+2-Get all the data of students above 30 years old
+
+
+select * FROM students where Age >= 30
+
+
+"3"	"Hasan"	"30"	"M"	"150"
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+
+-------------------------------------
+
+3- Get the names of the females who are 30 years old
+
+select Name  FROM students where Gender = "F" and Age >= 30
+
+
+Jana	
+
+---------------------------------------------------
+
+4- Get the number of Points of Alex
+
+select Points FROM students 
+where Name ="Alex"
+
+200
+
+---------------------------------------------------
+
+5-Add yourself as a new student (your name, your age...)
+
+insert into students (ID , Name, Age , Gender , Points)
+values
+(7,"Sarkis",25,"F",100000);
+
+
+"1"	"Alex"	"21"	"M"	"200"
+"2"	"Basma"	"25"	"F"	"300"
+"3"	"Hasan"	"30"	"M"	"150"
+"4"	"Layal"	"18"	"F"	"350"
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+"7"	"Sarkis "25"	"F"	"100000"
+
+
+----------------------------------------------------------
+
+6-Increase the points of Basma because she solved a new exercise
+
+UPDATE students 
+   SET points = 500 
+ WHERE name = 'Basma';
+
+
+"1"	"Alex"	"21"	"M"	"200"
+"2"	"Basma"	"25"	"F"	"305"
+"3"	"Hasan"	"30"	"M"	"150"
+"4"	"Layal"	"18"	"F"	"350"
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+"7"	"Sarkis" "25"	"F"	"100000"
+----------------------------------------------------------------
+
+
+7-Decrease the points of Alex because he's late today
+
+UPDATE students 
+   SET points = 100 
+ WHERE name = 'Alex';
+
+"1"	"Alex"	"21"	"M"	"50"
+"2"	"Basma"	"25"	"F"	"300"
+"3"	"Hasan"	"30"	"M"	"150"
+"4"	"Layal"	"18"	"F"	"350"
+"5"	"Robert"	"34"	"M"	"500"
+"6"	"Jana"	"33"	"F"	"500"
+"7"	"Sarkis" "25"	"F"	"100000"
+

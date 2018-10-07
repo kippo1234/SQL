@@ -1,0 +1,27 @@
+9-Produce a table that contains, for each employee, his/her name, company name, and company date
+
+SELECT companies.Name, companies.Date, employees.Name
+FROM companies
+join employees on companies.ID= employees.ID
+
+
+
+-------------------------------------------------------------------------------------
+10- Join companies before 2000
+
+SELECT companies.Name, companies.Date, employees.Name
+FROM companies
+join employees on companies.ID= employees.ID
+where Date<2000
+
+
+
+-------------------------------------------------------------------------------------
+
+11- Find the name of company that has a graphic designer
+
+SELECT companies.Name, companies.Date, employees.Name, employees.Role
+FROM companies
+join employees on companies.ID= employees.ID
+where Role='Graphic Designer'
+
